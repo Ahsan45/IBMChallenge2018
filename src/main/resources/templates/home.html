@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Boot Thymeleaf Hello World Example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" th:href="@{/assets/main.css}"
+	href="../../assets/main.css" />
+
+</head>
+<body>
+	<div class="container">
+
+		<div class="starter-template">
+			<h1>FAA Drone Registration</h1>
+			<h2>
+				To register a drone, click the Register Drone link. To log in as an FAA user, click the FAA Log In link
+			</h2>
+		</div>
+
+	</div>
+	<!-- /.container -->
+
+	<nav class="navbar navbar-inverse">
+		<div class="container">
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="/user">Register Drone</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+</body>
+</html>
