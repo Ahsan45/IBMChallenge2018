@@ -1,11 +1,36 @@
 package ibm.cai.challenge.model;
 
-import java.util.Random;
+import java.io.Serializable;
+ 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
-public class User{
+
+@Entity
+@Table(name = "users")
+public class User implements Serializable{
+
+    private static final long serialVersionUID = -3009157732242241606L;
+
+    @Column(name = "firstname")
+    @NotNull
+    @Size(min = 2, max = 100)
     private String firstName;
+    @NotNull
+    @Column(name = "lastname")
+    @Size(min = 2, max = 100)
     private String lastName;
+    @NotNull
+    @Column(name = "address")
+    @Size(min = 2, max = 100)
     private String address;
+    @Id
+    @NotNull
+    @Size(min = 2, max = 100)
     private String droneID;
     private String uniqueID;
 
@@ -41,9 +66,8 @@ public class User{
         return droneID;
     }
 
-    public void setUniqueID(){
-        Random rand = new Random();
-        uniqueID = String.format("%09d", rand.nextInt(10000000) + 1);
+    public void setUniqueID(String droneID){
+        this.uniqueID = "FAA" + droneID;
     }
 
     public String getUniqueID(){

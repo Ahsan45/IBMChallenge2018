@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS users;
+  
+CREATE TABLE users (
+    ID varchar(100) PRIMARY KEY NOT NULL,
+    FIRSTNAME varchar(100) NOT NULL,
+    LASTNAME varchar(100) NOT NULL,
+    ADD varchar(100) NOT NULL
+);
